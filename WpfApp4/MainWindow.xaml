@@ -1,0 +1,247 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Графический редактор" Height="450" Width="600" Background="LightGray">
+    <Grid x:Name="grid">
+        <Button HorizontalAlignment="Left"
+                Margin="12,26,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="Red"
+                Cursor="Hand"
+                x:Name="Button1"
+                MouseRightButtonDown="Button1_MouseRightButtonDown"
+                Click="Button_Click_1"/>
+        <Button HorizontalAlignment="Left"
+                Margin="33,26,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="Orange"
+                Cursor="Hand"
+                Click="Button_Click_2"
+                x:Name="Button2"
+                MouseRightButtonDown="Button2_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="54,26,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="Yellow"
+                Cursor="Hand"
+                Click="Button_Click_3"
+                x:Name="Button3"
+                MouseRightButtonDown="Button3_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="75,26,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="LightYellow"
+                Cursor="Hand"
+                Click="Button_Click_4"
+                x:Name="Button4"
+                MouseRightButtonDown="Button4_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="12,48,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="Purple"
+                Cursor="Hand"
+                Click="Button_Click_5"
+                x:Name="Button5"
+                MouseRightButtonDown="Button5_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="33,48,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="RoyalBlue"
+                Cursor="Hand"
+                Click="Button_Click_6"
+                x:Name="Button6"
+                MouseRightButtonDown="Button6_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="54,48,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="SeaGreen"
+                Cursor="Hand"
+                Click="Button_Click_7"
+                x:Name="Button7"
+                MouseRightButtonDown="Button7_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="75,48,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="GreenYellow"
+                Cursor="Hand"
+                Click="Button_Click_8"
+                MouseRightButtonDown="Button8_MouseRightButtonDown"
+                x:Name="Button8"/>
+        <InkCanvas Margin="0,120,0,0" x:Name="Canv">
+            <InkCanvas.DefaultDrawingAttributes >
+                <DrawingAttributes
+                    Color = "White" Width = "6" x:Name="Brush" StylusTip="Ellipse"/>
+            </InkCanvas.DefaultDrawingAttributes>
+            <Image HorizontalAlignment="Left" Height="334" VerticalAlignment="Top" Width="592" Margin="0,0,-592,-334" x:Name="Img"/>
+        </InkCanvas>
+
+        <Button HorizontalAlignment="Left"
+                Margin="12,69,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="White"
+                Cursor="Hand"
+                Click="Button_Click_9"
+                x:Name="Button9"
+                Visibility="Hidden"
+                MouseRightButtonDown="Button9_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="33,69,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="White"
+                Cursor="Hand"
+                x:Name="Button10"
+                Click="Button_Click_10"
+                Visibility="Hidden"
+                MouseRightButtonDown="Button10_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="54,69,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="White"
+                Cursor="Hand"
+                x:Name="Button11"
+                Click="Button_Click_11"
+                Visibility="Hidden"
+                MouseRightButtonDown="Button11_MouseRightButtonDown"/>
+        <Button HorizontalAlignment="Left"
+                Margin="75,69,0,0"
+                VerticalAlignment="Top"
+                Width="22"
+                Height="22"
+                Background="White"
+                Cursor="Hand"
+                x:Name="Button12"
+                Click="Button_Click_12"
+                Visibility="Hidden"
+                MouseRightButtonDown="Button12_MouseRightButtonDown"/>
+        <ComboBox HorizontalAlignment="Left" 
+                  Margin="201,34,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="47"
+                  SelectionChanged="ComboBox_SelectionChanged"
+                  x:Name="CMB"
+                  >
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+            <ComboBoxItem>6</ComboBoxItem>
+            <ComboBoxItem>7</ComboBoxItem>
+            <ComboBoxItem>8</ComboBoxItem>
+            <ComboBoxItem>9</ComboBoxItem>
+            <ComboBoxItem>10</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Изображение" 
+                HorizontalAlignment="Left" 
+                Margin="201,61,0,0" 
+                VerticalAlignment="Top" 
+                Width="86" 
+                Click="Button_Click_20"
+                Background="Snow"/>
+        <Button Margin="115,26,408,327" x:Name="button" Click="Button_Click_13">
+            <Button.ContentTemplate >
+                <DataTemplate >
+                    <Image   Source="Images\img9.png"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Slider HorizontalAlignment="Left"
+            Background="Red"
+            x:Name="slider1"
+            Margin="323,10,0,379" 
+            TickPlacement="TopLeft"
+            TickFrequency="10"
+            SmallChange="1"
+            Maximum="255"
+            LargeChange="5"
+            Cursor="Hand"
+            Width="135"
+            Height="30"
+            ValueChanged="slider1_ValueChanged"
+                Visibility="Hidden"/>
+        <Slider HorizontalAlignment="Left"
+            Background="Green"
+            x:Name="slider2"
+            Margin="323,48,0,341" 
+            TickPlacement="TopLeft"
+            TickFrequency="10"
+            SmallChange="1"
+            Maximum="255"
+            LargeChange="5"
+            Cursor="Hand"
+            Width="135"
+            Height="30"
+            ValueChanged="slider1_ValueChanged"
+            Visibility="Hidden"    />
+        <Slider HorizontalAlignment="Left"
+            Background="Blue"
+            x:Name="slider3"
+            Margin="323,85,0,304" 
+            TickPlacement="TopLeft"
+            TickFrequency="10"
+            SmallChange="1"
+            Maximum="255"
+            LargeChange="5"
+            Cursor="Hand"
+            Width="135"
+            Height="30"
+            ValueChanged="slider1_ValueChanged"
+                Visibility="Hidden"/>
+        <Rectangle Stroke="Black" Margin="532,11,-18,335" x:Name="r1" RenderTransformOrigin="0.01,0.507" Visibility="Hidden">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="27.44"
+                                        />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button Content="Применить" 
+            HorizontalAlignment="Left" 
+            Margin="487,95,0,0" 
+            VerticalAlignment="Top" 
+            Width="75"
+            Click="Button_Click"
+                Visibility="Hidden"
+                x:Name="Button"/>
+        <TextBlock Text="{Binding Value, ElementName=slider1}" FontSize="10" Margin="294,10,274,379" x:Name="TB1" RenderTransformOrigin="1.042,1.9" Visibility="Hidden"/>
+        <TextBlock Text="{Binding Value, ElementName=slider3}" FontSize="10" Margin="294,85,274,304" x:Name="TB3" Visibility="Hidden"/>
+        <TextBlock Text="{Binding Value, ElementName=slider2}" FontSize="10" Margin="294,46,274,343 " x:Name="TB2" Visibility="Hidden"/>
+        <Button Content="Применить" 
+            HorizontalAlignment="Left" 
+            Margin="487,95,0,0" 
+            VerticalAlignment="Top" 
+            Width="75"
+            Click="Button_Click_14"
+                Visibility="Hidden"
+                x:Name="Button14"/>
+    </Grid>
+</Window>
